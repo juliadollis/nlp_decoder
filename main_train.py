@@ -9,7 +9,6 @@ from datasets import load_dataset
 from tqdm import tqdm
 from matplotlib.ticker import MaxNLocator  
 
-# ===== seus módulos (mantendo o estilo dos imports que você usou) =====
 from codigos import (
     TransformerBlock,
     LayerNorm, FeedForward, GELU,
@@ -73,7 +72,7 @@ def main():
     # -------------------------------------------------------
     # DATA: Streaming Hugging Face
     # -------------------------------------------------------
-    SAMPLE_SIZE = 50  # nº de exemplos (linhas)
+    SAMPLE_SIZE = 5000  # nº de exemplos (linhas)
     print("Carregando dataset em streaming...")
     stream_ds = load_dataset("chenuneris/news-brazillian-clean", split="train", streaming=True)
 
