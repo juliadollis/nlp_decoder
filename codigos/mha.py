@@ -34,7 +34,7 @@ class MultiHeadAttention(nn.Module):
         #    - Aplique W_query/W_key/W_value em x.
         #    - Shapes após projeção: (b, num_tokens, d_out) para cada um.
         #
-        # 2) Separar em hads  
+        # 2) Separar em heads  
         #    - reshapes: (b, num_tokens, d_out) -> (b, num_heads, num_tokens, head_dim)
         #    - use .view(...) e depois .transpose(1, 2) para ficar (b, num_heads, num_tokens, head_dim).
         #    - faça isso para Q, K e V.
