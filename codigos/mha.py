@@ -48,7 +48,7 @@ class MultiHeadAttention(nn.Module):
         #    - aplique com masked_fill_ nas posições mascaradas com -inf.
         #
         # 5) Softmax + dropout  
-        #    - softmax em dim=-1 para virar pesos; aplique dropout.
+        #    - softmax em dim=-1; aplique dropout.
         #
         # 6) Aplicar pesos em V  
         #    - context = attn_weights @ V  -> (b, num_heads, num_tokens, head_dim).
